@@ -2,17 +2,20 @@
 
 .btn {
 
-    //^ Generic buttons
+    //^ Generic buttons //
 
     &,
     &:link,
     &:visited {
+        @include transition(.2s, ease);
         text-transform: uppercase;
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 20rem;
         font-size: $fnt-default;
-        @include transition(.2s, ease);
+        letter-spacing: $spacing;
+        box-shadow: $light-shadow;
+
 
         border: none;
         cursor: pointer;
