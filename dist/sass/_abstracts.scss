@@ -1,6 +1,6 @@
-// * --------------------------------- VARIABLES --------------------------------- //
+// * --------------- Variables--------------- * //
 
-//& COLORS //
+//& ----- COLORS ----- //
 
 $clr-black:#000;
 $clr-white:#fff;
@@ -25,7 +25,7 @@ $clr-grey-3: #324d67;
 $clr-grey-4: #48647f;
 
 
-/* grey used for paragraphs */
+/* lighter grey - used for paragraphs */
 $clr-grey-5: #617d98;
 $clr-grey-6: #829ab0;
 $clr-grey-7: #9eb2c7;
@@ -39,8 +39,16 @@ $clr-grey-10: #f1f5f8;
 //%  Primary Color //
 
 // $clr-primary:;
-// $clr-primary-light:;
-// $clr-primary-dark:;
+
+// Light Shades
+// $clr-primary-light-1:;
+// $clr-primary-light-2:;
+// $clr-primary-light-3:;
+
+// Dark Shades
+// $clr-primary-dark-1:;
+// $clr-primary-dark-2:;
+// $clr-primary-dark-3:;
 
 //% --- //
 
@@ -48,8 +56,16 @@ $clr-grey-10: #f1f5f8;
 //%  Secondary Color //
 
 // $clr-secondary:;
-// $clr-secondary-light:;
-// $clr-secondary-dark:;
+
+// Light Shades
+// $clr-secondary-light-1:;
+// $clr-secondary-light-2:;
+// $clr-secondary-light-3:;
+
+// Dark Shades
+// $clr-secondary-dark-1:;
+// $clr-secondary-dark-2:;
+// $clr-secondary-dark-3:;
 
 //% --- //
 
@@ -57,26 +73,24 @@ $clr-grey-10: #f1f5f8;
 //%  Tertiary Color //
 
 // $clr-tertiary:;
-// $clr-tertiary-light:;
-// $clr-tertiary-dark:;
+
+// Light Shades
+// $clr-tertiary-light-1:;
+// $clr-tertiary-light-2:;
+// $clr-tertiary-light-3:;
+
+// Dark Shades
+// $clr-tertiary-dark-1:;
+// $clr-tertiary-dark-2:;
+// $clr-tertiary-dark-3:;
 
 //% --- //
 
-//& --- --- //
+//& ----- ----- //
 
 
 
-//& GRID //
-
-$grid-width:114rem;
-$gutter-vertical:8rem;
-$gutter-horizontal:6rem;
-
-//& --- --- //
-
-
-
-//& FONTS //
+//& ----- FONTS ----- //
 
 // Text
 $fnt-small-1:1.2rem;
@@ -88,7 +102,7 @@ $fnt-big-3:2.2rem;
 
 
 // Headings
-$fnt-head-1:6rem;
+$fnt-head-1:5rem;
 $fnt-head-2:4rem;
 $fnt-head-3:2.5rem;
 $fnt-head-4:1.8rem;
@@ -97,82 +111,54 @@ $fnt-head-4:1.8rem;
 // Font Families
 $ff-primary: "Lato",
 sans-serif;
+$ff-secondary : Arial,
+Helvetica,
+sans-serif;
 
-//& --- --- //
-
-
-
-//& SHADOWS
-
-$box-shadow: 0 1rem 2rem rgba($clr-black, .2);
-$text-shadow: 0 .4rem .8rem rgba($clr-black, .15);
-
-$light-shadow: 0 .7rem 1.5rem rgba($clr-black, 0.1);
-$dark-shadow: 0 .7rem 1.5rem rgba($clr-black, 0.2);
-
-//& --- --- //
+//& ----- ----- //
 
 
 
-//& OTHER //
+//& ----- SHADOWS ----- //
+
+// Text
+$shadow-text-1: 0 3px 5px rgba($clr-black, .15);
+$shadow-text-2: 0 5px 7px rgba($clr-black, .15);
+
+// Light
+$shadow-light-1: 0 .5rem 1.2rem rgba($clr-black, 0.1);
+$shadow-light-2: 0 .7rem 1.5rem rgba($clr-black, 0.1);
+$shadow-light-3: 0 1rem 1.7rem rgba($clr-black, 0.1);
+
+// Dark
+$shadow-dark-1: 0 .5rem 1.2rem rgba($clr-black, 0.2);
+$shadow-dark-2: 0 .7rem 1.5rem rgba($clr-black, 0.2);
+$shadow-dark-3: 0 1rem 1.7rem rgba($clr-black, 0.2);
+$shadow-dark-4: 0 1.2rem 2rem rgba($clr-black, 0.2);
+
+//& ----- ----- //
+
+
+
+//& ----- OTHER----- //
 
 $spacing: 0.25rem;
 $radius:3px;
 $transition:all .3s ease;
 
-//& --- --- //
+//& ----- ----- //
 
-//*---------------------------------
-
-
-
-
-// * --------------------------------- MIXINS --------------------------------- //
-
-
-//% --- Center an element --- //
-
-// Center with position //
-
-@mixin center-pos {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-// --- //
+// * --------------- --------------- * //
 
 
 
-// Center with flexbox //
 
-@mixin center-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-// --- //
+// * --------------- Mixins --------------- * //
 
 
+//%  General //
 
-// Center with margins //
-
-@mixin center-mar {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-// --- //
-
-//% --- --- //
-
-
-//%  Clearfix //
-
+// Clearfix
 @mixin clearfix {
 
     &::after,
@@ -183,12 +169,8 @@ $transition:all .3s ease;
     }
 }
 
-//% --- //
 
-
-
-//% Transition //
-
+// Transition
 @mixin transition($time, $function) {
     transition: all $time $function;
 }
@@ -197,22 +179,52 @@ $transition:all .3s ease;
 
 
 
+//% --- Center an element --- //
+
+// Center with position //
+@mixin center-pos {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// Center with flexbox //
+@mixin center-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+// Center with margins //
+@mixin center-mar {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//% --- --- //
+
+
+
 //% Shadows //
 
-@mixin box-shadow ($blur, $op) {
+@mixin shadow-box($blur, $op) {
     box-shadow: 0 1rem $blur rgba($clr-black, $op);
 }
 
-@mixin text-shadow ($blur, $op) {
+@mixin shadow-text ($blur, $op) {
     box-shadow: 0 .4rem $blur rgba($clr-black, $op);
 }
 
 //% --- //
 
 
+
 //% ---------- Media Queries ---------- //
-
-
 
 //@ ----- All Widths ----- //
 
@@ -237,7 +249,6 @@ $transition:all .3s ease;
 //@ -----  ----- //
 
 
-
 //@ ----- Custom Widths ----- //
 
 
@@ -250,6 +261,7 @@ $transition:all .3s ease;
 // -- desktop-big (1800px +)
 
 //# -- -- //
+
 
 @mixin respond($breakpoint) {
 
@@ -301,17 +313,15 @@ $transition:all .3s ease;
 
 //% ----------   ---------- //
 
-//$ -- Media -- //
-
+//# -- Media -- //
 @include respond (tab-port) {}
 
-//$ ---- //
+
+// * --------------- --------------- * //
 
 
-//*---------------------------------
+
+// * --------------- Functions --------------- * //
 
 
-// * --------------------------------- FUNCTIONS--------------------------------- //
-
-
-//*---------------------------------
+// * --------------- --------------- * //
